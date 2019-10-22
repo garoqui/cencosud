@@ -8,6 +8,9 @@ import { ProductsService } from '../../services/products.service'
 })
 export class HomeComponent implements OnInit {
   @Input() public category
+  displayavailable = "nodisplay"
+  displayprice = "nodisplay"
+  displaystock = "nodisplay"
   products:any;
   productsFilter
   public valini
@@ -55,15 +58,14 @@ export class HomeComponent implements OnInit {
     }else{
       this.getAllProducts()
       this.getFilter(opc).then(res=>{
-        this.productsFilter = res
-       console.log(this.productsFilter)
+       this.productsFilter = res      
     })     
   }
 }
 
 filterPrice = ()=>{
   this.getAllProducts()
-  this.getFilterPrice().then(res=>this.productsFilter=res)
+  this.getFilterPrice().then(res=>this.productsFilter=res)  
 }
 
 filterStock = ()=>{
@@ -105,5 +107,19 @@ getFilterPrice = ()=>{
         resolve(arr)
       },1000)    
       })
+  }
+
+  changeFilter(event){
+    this.closeModal()
+    let id = event.target.id
+    id === "1" ? this.displayavailable = "display" : false
+    id === "2" ? this.displayprice = "display" : false
+    id === "3" ? this.displaystock = "display" : false    
+  }
+
+  closeModal = ()=>{
+    this.displayavailable = "nodisplay"
+    this.displayprice = "nodisplay"
+    this.displaystock = "nodisplay"
   }
 }

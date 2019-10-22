@@ -3,9 +3,9 @@
         <div class="input-group-prepend">
           <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filtrar por:</button>
           <div class="dropdown-menu">
-            <a class="dropdown-item" data-toggle="modal" data-target="#exampleModal" (change)="filter($event)">Disponibilidad</a>
-            <a class="dropdown-item" (change)="filter($event)" data-target="#exampleModal" (change)="filter($event)">Rango de Precios</a>
-            <a class="dropdown-item" (change)="filter($event)" data-target="#exampleModal" (change)="filter($event)">Cantidad en Stock</a>
+            <a class="dropdown-item" data-toggle="modal" data-target="#exampleModal" id="1" (click)="changeFilter($event)">Disponibilidad</a>
+            <a class="dropdown-item" data-toggle="modal" data-target="#exampleModal" id="2" (click)="changeFilter($event)">Rango de Precios</a>
+            <a class="dropdown-item" data-toggle="modal" data-target="#exampleModal" id="3" (click)="changeFilter($event)">Cantidad en Stock</a>
             
           </div>
         </div>       
@@ -44,7 +44,7 @@
         </div>
         <div class="modal-body">
             <div class="form-check">
-              <div id="availables-container">
+              <div id="availables-container" [ngClass]="displayavailable">
 
                   <div>
                       <input class="form-check-input" (change)="filter($event)" type="radio" name="exampleRadios" id="exampleRadios1" value="0" checked>
@@ -68,7 +68,7 @@
                   </div>
                 </div>
 
-                <div id="priceContainer">                  
+                <div id="priceContainer" [ngClass]="displayprice">                  
                   <div class="form-group">
                       <label for="precioinicial">Precio Inicial</label>
                       <input type="text" [(ngModel)]="valini" name="valini" class="form-control" id="precioinicial" aria-describedby="precioinicial" placeholder="Precio Inicial">                     
@@ -83,7 +83,7 @@
 
               </div>
                
-               <div id="stockContainer">
+               <div id="stockContainer" [ngClass]="displaystock">
                   <div class="form-group">
                       <label for="preciofinal">Cantidad Inicial</label>
                       <input type="text" [(ngModel)]="stockini" name="valfin" class="form-control" id="preciofinal" aria-describedby="preciofinal" placeholder="Precio Final">                  
@@ -104,8 +104,8 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <button type="button" (click) = "filterPrice()" class="btn btn-primary">Filtrar</button>
-          <button type="button" (click) = "filterStock()" class="btn btn-primary">Filtrar</button>          
+          <button type="button" (click) = "filterPrice()" [ngClass]="displayprice" class="btn btn-primary">Filtrar</button>
+          <button type="button" (click) = "filterStock()" [ngClass]="displaystock" class="btn btn-primary">Filtrar</button>          
         </div>
       </div>
     </div>
