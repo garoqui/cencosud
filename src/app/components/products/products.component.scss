@@ -1,0 +1,10 @@
+.container-products{    
+    display : flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1rem;        
+}
+
+.card{
+    margin: .5rem;
+}

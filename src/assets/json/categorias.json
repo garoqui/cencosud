@@ -1,0 +1,77 @@
+{ "categories": [
+	{
+		"id": 1,
+		"name": "Supermercado",
+		"sublevels": [
+			{
+				"id": 1,
+				"name": "Despensa",
+				"sublevels": [
+					{
+						"id": 2,
+						"name": "Arroz y granos"
+					},
+					{
+						"id": 3,
+						"name": "Aceite"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": 2,
+		"name": "Tecnología",
+		"sublevels": [
+			{
+				"id": 4,
+				"name": "Televisores y Video",
+				"sublevels": [
+					{
+						"id": 5,
+						"name": "Televisores"
+					},
+					{
+						"id": 6,
+						"name": "Computadores",
+						"sublevels": [
+							{
+								"id": 7,
+								"name": "Portátiles"
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": 8,
+		"name": "Electrodomésticos",
+		"sublevels": [
+			{
+				"id": 9,
+				"name": "Refrigeración"
+			},
+			{
+				"id": 10,
+				"name": "Lavado"
+			}
+		]
+	},
+	{
+		"id": 11,
+		"name": "Hogar y decoración",
+		"sublevels": [
+			{
+				"id": 12,
+				"name": "Colchones"
+			},
+			{
+				"id": 13,
+				"name": "Mesa y cocina"
+			}
+		]
+	}
+]
+}

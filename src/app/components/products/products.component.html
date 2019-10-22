@@ -1,0 +1,14 @@
+<div class= "container">
+        <div class="container-products">
+            <div *ngFor="let product of productsFilter" class="card" >
+            
+                    <div class="card-body">                        
+                      <h5 class="card-title">{{product.name}}</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">{{product.available}}</h6>
+                      <p class="card-text">{{product.id}}</p>
+                      <a href="#" class="card-link">{{product.quantity}}</a>
+                      <a href="#" class="card-link">{{product.price}}</a>
+                    </div>
+            </div>         
+        </div>
+    </div>

@@ -1,0 +1,1 @@
+export const URLSERVER = "http://localhost:4200/";

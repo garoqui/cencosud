@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    
+  
+    <div  id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item" (click)= "changeViewCategory()">
+            <a class="nav-link "  id="navbarDropdownMenuLink"  >
+                <i class="fa fa-bars orange" aria-hidden="true"></i>
+                <span class="item-menu">CATEGORIAS</span>
+            </a>           
+      </ul>          
+    </div>    
+  </nav>
+
+  <app-categories [display] = "showCategory" 
+  (SendShow) = "changeView($event)" 
+  ></app-categories>
+
+  
+  
+  

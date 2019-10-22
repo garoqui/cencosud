@@ -1,0 +1,29 @@
+<div class="container-categories">
+   
+    <div [ngClass]="categoriesClass">
+        <ul>
+          <li *ngFor ="let category of categories" >
+           <div (mouseover) = "getSubcategory($event)" id={{category.id}}> {{category.name}}</div>
+          </li>
+        </ul>
+    </div>
+    
+    <div [ngClass]="subcategoriesClass">
+      <div class ="subcategories-item" *ngFor="let subcategory of subcategories[0]">
+          <ul>
+              <li>
+                  <a class="subcategories-title">{{subcategory.name}}</a>
+              </li>
+
+              <li *ngFor = "let detail of detailSubcategories">
+                <a (click)="getCategory($event)" id={{detail.id}} class="subcategories-detail">{{detail.name}}</a>
+              </li>
+             
+          </ul>
+      </div>
+      
+  </div>
+
+</div>
+<app-home [category] = "category"></app-home>
+  

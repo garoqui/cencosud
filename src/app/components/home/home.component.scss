@@ -1,0 +1,50 @@
+.container-products{    
+    display : flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1rem;        
+}
+
+.card{
+    margin: .5rem;
+}
+
+.submenu{
+    display : flex;
+}
+
+.input-group-prepend{
+    width : 100%;
+}
+
+.input-group-prepend button{
+    width : 100%;
+}
+
+.order:hover{
+    background-color: #f1900a;
+    color : white;
+}
+
+.dropdown-menu{
+    width : 100%;
+}
+
+.dropdown-menu a:hover {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color : white;
+}
+
+.modal-header{
+    background-color: #343a40;
+    color: white;
+}
+
+.btn-primary{
+    background-color: #f1900a;
+    color : white;
+    border-color: #f1900a;
+}
+
+

@@ -1,0 +1,62 @@
+.display{
+    display: block;
+}
+
+.nodisplay{
+    display : none;
+}
+.categories{
+    background-color: #343a40;
+    width:20%;
+    float :left;
+}
+
+.categories ul{
+    padding: 0px;
+
+}
+.categories li{
+    padding : 10px 5px 10px  35px;
+    cursor: pointer;          
+}
+
+.categories li:hover{
+    background-color: #f1900a;
+    transition: background-color .3s linear ;
+    font-weight: bold;    
+}
+.categories div{
+    text-decoration: none;
+    color: white;
+    width : 100%;
+    height: 100%;    
+}
+
+.subcategories{    
+    width:80%;
+    float :left;
+}
+
+.subcategories-item{
+    width : 25%;
+    float : left;
+    padding : 10px;
+}
+
+.subcategories-title{
+    color : #f1900a !important;
+    font-weight: bold;
+}
+
+.subcategories li{
+    padding: 10px;
+}
+
+.subcategories li:hover{
+    color : #f1900a;
+}
+
+.subcategories-detail{
+    cursor: pointer;    
+}
+
